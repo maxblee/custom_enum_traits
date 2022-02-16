@@ -11,7 +11,7 @@
 /// Index items in an enum (and take an enum index and convert it to an enum variant)
 pub trait EnumIndex {
     /// Convert an integer into an enum variant (where the first items are enumerated first, the second items second, etc.)
-    fn from_index(idx: usize) -> Self;
+    fn from_index(idx: usize) -> Option<Self>;
 
     /// Take an enum variant and convert it into an index (where the first listed variant is enumerated first, the second second, etc.)
     fn to_index(&self) -> usize;
